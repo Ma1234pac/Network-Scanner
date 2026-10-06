@@ -1,0 +1,27 @@
+Version 1 — Host Discovery
+
+Για παράδειγμα, στο δικό σου εργαστηριακό/local network:
+
+python scanner.py discover 192.168.1.0/24
+
+ή με JSON:
+
+python scanner.py discover 192.168.1.0/24 --output results.json
+
+Version 2 — Port Scanner
+
+Scan των common ports:
+
+python scanner.py ports 192.168.1.10
+
+Συγκεκριμένες ports:
+
+python scanner.py ports 192.168.1.10 --ports 22,80,443
+
+Range:
+
+python scanner.py ports 192.168.1.10 --ports 20-100
+
+Και με JSON:
+
+python scanner.py ports 192.168.1.10 --ports 1-1000 --output ports.json
